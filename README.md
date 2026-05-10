@@ -35,10 +35,11 @@ cd Matrix-Morpheus-GRUB-Theme
 chmod +x install.sh
 ```
 
-4. Execute the installation script as admin
+4. Execute the installation script as admin, either for **debian** or **cachy**
 
 ```shell
-sudo ./install.sh
+sudo ./install.sh debian
+sudo ./install.sh cachy
 ```
 
 5. Reboot to test your new theme
