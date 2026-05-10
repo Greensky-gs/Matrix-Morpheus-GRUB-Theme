@@ -1,15 +1,15 @@
 # Matrix Morpheus GRUB Theme
 
-**Red Pill vs Blue Pill**
+**Pillule Rouge ou Pillule Bleue**
 
-A minimalist Matrix-inspired GRUB theme featuring full-screen dynamic backgrounds that change between Linux and Windows.
+Un thème GRUB minimaliste inspiré de Matrix, avec un arrière plan dynamique entre Linux et Windows
 
 ---
 
-Forked from [https://github.com/Priyank-Adhav/Matrix-Morpheus-GRUB-Theme](https://github.com/Priyank-Adhav/Matrix-Morpheus-GRUB-Theme)
+Fork de [https://github.com/Priyank-Adhav/Matrix-Morpheus-GRUB-Theme](https://github.com/Priyank-Adhav/Matrix-Morpheus-GRUB-Theme)
 
-While the icons are **arranged horizontally** on screen,  
-you still navigate using the **Up** and **Down arrow keys** as in a normal GRUB menu.
+Même si les icônes sont affichées **horizontalement**,
+la navigation se fait toujours avec les flèches **haut** et **bas** comme un grub normal
 
 ---
 
@@ -17,41 +17,30 @@ you still navigate using the **Up** and **Down arrow keys** as in a normal GRUB 
 
 ## Installation
 
-1. Clone the repo
+1. Cloner le repo
 
 ```shell
 git clone https://github.com/Greensky-gs/Matrix-Morpheus-GRUB-Theme
 ```
 
-2. Go into the folder 
+2. Aller dans le dossier 
 
 ```shell
 cd Matrix-Morpheus-GRUB-Theme
 ```
 
-3. Make the installer executable
+3. Rendre l'exécutable exécutable, si ce n'est pas déjà fait
 
 ```shell
 chmod +x install.sh
 ```
 
-4. Execute the installation script as admin, either for **debian** or **cachy**
+4. Exécuter l'installeur en tant qu'administrateur, avec **debian** ou **cachy**
 
 ```shell
 sudo ./install.sh debian
 sudo ./install.sh cachy
 ```
 
-5. Reboot to test your new theme
+5. Rebooter
 
----
-Optional: Simplify Your GRUB Menu
-
-I designed this theme for a two entry layout and haven't really thought about how to visually handle the additional entries. 
-
-If your GRUB menu currently has extra entries such as:
-
-- “Advanced options for Arch Linux”
-- “UEFI Firmware Settings”
-
-I would recommend you remove the extra menu entries from the grub config if you don't use them.

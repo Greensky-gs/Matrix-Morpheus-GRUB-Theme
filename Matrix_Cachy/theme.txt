@@ -1,6 +1,7 @@
 # =============================
 # Matrix Morpheus GRUB Theme
 # Red Pill vs Blue Pill
+# Forked from https://github.com/Priyank-Adhav/Matrix-Morpheus-GRUB-Theme
 # =============================
 
 # Background and general settings

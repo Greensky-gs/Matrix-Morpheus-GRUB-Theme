@@ -1,7 +1,8 @@
 #!/bin/bash
 # ===============================================================
 # Matrix Morpheus GRUB Theme Installer
-# Repository: https://github.com/Priyank-Adhav/Matrix-GRUB-Theme
+# Repository: https://github.com/Greensky-gs/Matrix-GRUB-Theme
+# Forked from: https://github.com/Priyank-Adhav/Matrix-Morpheus-GRUB-Theme
 # ===============================================================
 
 set -e
@@ -13,40 +14,40 @@ GRUB_FILE="/boot/grub/grub.cfg"
 
 echo ""
 echo "==========================="
-echo "Matrix GRUB Theme Installer"
+echo "Installer theme GRUB Matrix"
 echo "==========================="
 echo ""
 
 # Check for root privileges
 if [ "$EUID" -ne 0 ]; then
-    echo "Please run this script as root (use sudo)."
+	echo "Veuillez exécuter le script en administrateur (sudo)."
     exit 1
 fi
 
 if [ "$1" == "cachy" ]; then
 	THEME_NAME="Matrix_Cachy"
-	echo "Installing Cachy OS Matrix Theme for Grub"
+	echo "Installation du theme Cachy OS"
 elif [ "$1" == "debian" ]; then
 	THEME_NAME="Matrix_Debian"
-	echo "Installing Debian Matrix Theme for Grub"
+	echo "Installation du theme Debian"
 else
-	echo "Please specify either \"debian\" or \"cachy\" in command"
+	echo "Veuillez spécifier \"cachy\" ou \"debian\""
 	exit 1
 fi
 
 # Ensure theme directory exists 
-echo "Checking for theme directory..."
+echo "Création du répertoire du theme..."
 mkdir -p "$THEME_DIR"
 
 # Copy theme files 
-echo "Installing theme..."
+echo "Installation du theme..."
 cp -r "$THEME_NAME" "$THEME_DIR/" || {
-    echo "Failed to copy theme files."
+    echo "Echec de la copie des fichiers... Abandon."
     exit 1
 }
 
 # Configure GRUB to use the new theme 
-echo "Updating GRUB configuration..."
+echo "Mise a jour configuration Grub..."
 if grep -q '^GRUB_THEME=' "$GRUB_CFG"; then
     sed -i "s|^GRUB_THEME=.*|GRUB_THEME=\"${THEME_DIR}/${THEME_NAME}/theme.txt\"|" "$GRUB_CFG"
 else
@@ -55,16 +56,16 @@ else
 fi
 
 # Regenerate GRUB
-echo "Rebuilding GRUB configuration..."
+echo "Reconstruction de la configuration GRUB..."
 if command -v grub-mkconfig >/dev/null 2>&1; then
     grub-mkconfig -o "$GRUB_FILE" >/dev/null
-    echo "GRUB configuration updated successfully."
+    echo "Configuration GRUB reconstruite avec success"
 else
-    echo "grub-mkconfig not found. Please update your GRUB manually."
+    echo "Command grub-mkconfig introuvable. Veuillez mettre a jour la configuration manuellement"
     exit 1
 fi
 
 echo ""
-echo "Installation complete!"
-echo "Reboot to see your new Matrix GRUB theme."
+echo "Installation reussie"
+echo "Rebootez pour voir les effets"
 echo ""
