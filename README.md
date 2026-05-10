@@ -1,24 +1,26 @@
 # Matrix Morpheus GRUB Theme
+
 **Red Pill vs Blue Pill**
 
 A minimalist Matrix-inspired GRUB theme featuring full-screen dynamic backgrounds that change between Linux and Windows.
 
 ---
 
-**Note:**  
-Currently, the theme only includes the **Arch Linux** and **Windows** icons.  
- 
-Also, while the icons are **arranged horizontally** on screen,  
+Forked from [https://github.com/Priyank-Adhav/Matrix-Morpheus-GRUB-Theme](https://github.com/Priyank-Adhav/Matrix-Morpheus-GRUB-Theme)
+
+While the icons are **arranged horizontally** on screen,  
 you still navigate using the **Up** and **Down arrow keys** as in a normal GRUB menu.
 
 ---
-![Matrix Morpheus GRUB Theme preview showing Arch and Windows boot icons](preview.gif)
+
+![Matrix Morpheus GRUB Theme preview showing CachyOS and Windows boot icons](preview.gif)
+
 ## Installation
 
 1. Clone the repo
 
 ```shell
-git clone https://github.com/Priyank-Adhav/Matrix-Morpheus-GRUB-Theme
+git clone https://github.com/Greensky-gs/Matrix-Morpheus-GRUB-Theme
 ```
 
 2. Go into the folder 

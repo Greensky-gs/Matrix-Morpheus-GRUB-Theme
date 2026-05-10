@@ -23,6 +23,17 @@ if [ "$EUID" -ne 0 ]; then
     exit 1
 fi
 
+if [ "$1" == "cachy" ]; then
+	THEME_NAME="Matrix_Cachy"
+	echo "Installing Cachy OS Matrix Theme for Grub"
+elif [ "$1" == "debian" ]; then
+	THEME_NAME="Matrix_Debian"
+	echo "Installing Debian Matrix Theme for Grub"
+else
+	echo "Please specify either \"debian\" or \"cachy\" in command"
+	exit 1
+fi
+
 # Ensure theme directory exists 
 echo "Checking for theme directory..."
 mkdir -p "$THEME_DIR"
